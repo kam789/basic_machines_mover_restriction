@@ -15,7 +15,7 @@ minetest.register_on_mods_loaded(function()
                 on_place = function(itemstack, placer, pointed_thing)
                     local can_mess = minetest.check_player_privs(placer.get_player_name(placer), { mover = true })
                     if not can_mess then
-                        minetest.chat_send_player(placer:get_player_name(), "You're not allowed to use this.")
+                        minetest.chat_send_player(placer:get_player_name(), "Insufficient privs, you're not allowed to use this.")
                         return
                     end
                     return minetest.item_place(itemstack, placer, pointed_thing)
