@@ -1,7 +1,7 @@
 minetest.register_privilege("mover",
     { description = "able to use basic_machines:mover.", give_to_singleplayer = false })
 
--- listed nodes require bmachines priv for placement
+-- listed nodes require mover priv for placement
 -- to add additional nodes, insert new entries into machine_list
 
 local machine_list = {
